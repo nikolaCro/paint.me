@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif; 
+}
+
+ body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #363636;
+    overflow: hidden;
+} 
+
+.picker {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.container {
+    background-image: url(images/fasada.jpg);
+    background-repeat: no-repeat;
+    max-width: 1280px;
+    max-height: 720px;
+    border: 5px solid #525252;
+    border-radius: 7px;
+}
+
+svg {
+    max-width: 1280px;
+}
+
+path {
+    -moz-mix-blend-mode: multiply;
+    mix-blend-mode: multiply;
+    transition: all .3s ease-out;
+}
+
+#label {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-30px, 25px);
+    width: 45px;
+    height: 45px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.fas {
+    position: absolute;
+    font-size: 20px;
+    transform: translateY(1px);
+}
