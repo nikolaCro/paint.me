@@ -15,14 +15,32 @@
     height: 100vh;
     background: #363636;
     overflow: hidden;
-} 
+}
+
+#logo {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 150px;
+}
 
 .picker {
     position: absolute;
     padding: 0;
     margin: 0;
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.picker-brush {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     opacity: 0;
     cursor: pointer;
@@ -35,10 +53,17 @@
     max-height: 720px;
     border: 5px solid #525252;
     border-radius: 7px;
+    position: relative;
 }
 
 svg {
     max-width: 1280px;
+}
+
+
+.windows-mask {
+    position: absolute;
+    top: 0;
 }
 
 path {
@@ -52,15 +77,34 @@ path {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translate(-30px, 25px);
-    width: 45px;
-    height: 45px;
+    transform: translate(-80px, 15px);
+    width: 50px;
     border: 2px solid black;
     border-radius: 50%;
+    z-index: 9999;
+    height: 50px;
+}
+
+#brush {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(15px, 83px);
+    width: 35px;
+    border: 2px solid black;
+    border-radius: 50%;
+    z-index: 9999;
+    height: 35px;
 }
 
 .fas {
     position: absolute;
-    font-size: 20px;
+    font-size: 24px;
     transform: translateY(1px);
+}
+
+.fa-brush {
+    transform: rotate(-90deg) translateY(1px);
+    font-size: 18px;
 }
